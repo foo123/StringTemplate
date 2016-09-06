@@ -12,6 +12,13 @@ if ( !class_exists('StringTemplate') )
 class StringTemplate
 {    
     const VERSION = '1.0.0';
+    private static $GUID = 0;
+    
+    private static function guid( )
+    {
+        return time().'--'.(++self::$GUID);
+    }
+    
     public static function multisplit($tpl, $reps, $as_array=false)
     {
         $a = array( array(1, $tpl) );

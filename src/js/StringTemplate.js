@@ -22,7 +22,12 @@ else if ( !(name in root) ) /* Browser/WebWorker/.. */
     /* module factory */        function ModuleFactory__StringTemplate( undef ){
 "use strict";
 
-var PROTO = 'prototype';
+var PROTO = 'prototype', GUID = 0;
+
+function guid( )
+{
+    return ''+new Date().getTime()+'--'+(++GUID);
+}
 
 function StringTemplate( tpl, replacements, compiled )
 {
@@ -36,6 +41,7 @@ function StringTemplate( tpl, replacements, compiled )
 }
 StringTemplate.VERSION = '1.0.0';
 StringTemplate.defaultArgs = /\$(-?[0-9]+)/g;
+StringTemplate.guid = guid;
 StringTemplate.multisplit = function multisplit( tpl, reps, as_array ) {
     var r, sr, s, i, j, a, b, c, al, bl;
     as_array = !!as_array;
