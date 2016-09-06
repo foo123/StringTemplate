@@ -11,6 +11,7 @@ if ( !class_exists('StringTemplate') )
 {
 class StringTemplate
 {    
+    const VERSION = '1.0.0';
     public static function multisplit($tpl, $reps, $as_array=false)
     {
         $a = array( array(1, $tpl) );

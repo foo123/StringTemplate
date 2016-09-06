@@ -115,6 +115,15 @@ def createFunction( args, sourceCode, additional_symbols=dict() ):
 
 class StringTemplate:
     
+    """
+    StringTemplate for Python,
+    https://github.com/foo123/StringTemplate
+    """
+    
+    VERSION = '1.0.0'
+    
+    createFunction = createFunction
+    
     def multisplit(tpl, reps, as_array=False):
         a = [ [1, tpl] ]
         reps = enumerate(reps) if as_array else reps.items()

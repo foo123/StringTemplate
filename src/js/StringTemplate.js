@@ -34,6 +34,7 @@ function StringTemplate( tpl, replacements, compiled )
     self._args = [tpl||'',replacements || StringTemplate.defaultArgs,compiled];
     self._parsed = false;
 }
+StringTemplate.VERSION = '1.0.0';
 StringTemplate.defaultArgs = /\$(-?[0-9]+)/g;
 StringTemplate.multisplit = function multisplit( tpl, reps, as_array ) {
     var r, sr, s, i, j, a, b, c, al, bl;
