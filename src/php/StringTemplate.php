@@ -7,7 +7,7 @@
 *   https://github.com/foo123/StringTemplate
 **/
 
-if (!class_exists('StringTemplate'))
+if (!class_exists('StringTemplate', false))
 {
 class StringTemplate
 {
